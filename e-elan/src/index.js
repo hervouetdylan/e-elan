@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './components/home/home';
 import App from './App';
 import Cart from './components/cart/cart';
+import Footer from './components/footer/footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
