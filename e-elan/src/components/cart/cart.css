@@ -1,33 +1,44 @@
 .cartdiv{
-    margin-top: 10%;/*Need to change value*/
-    background-color: grey;
+    margin-top: 10%;
     display: flex;
     justify-content: space-evenly;
+    display: flex;
+    align-items: center;
 }
 
 #cartimg{
     margin-top: 0;
-    width: 158px;
-    height: 149px;
+    width: 160px;
+    height: 150px;
     float: left;
+   
+    padding: 10% 0;
 }
 #productimg{
+    padding: 2% 0;
     width: 55px ;
     height: 50px;
-    float:left;
+    float: left;
 
 }
 .shopinglist{
     justify-content: space-between;
 }
 #product{
-    background-color: white;
-    height: auto;
-    width: auto;
-    display: flex;
-    justify-content: space-between;
+
+    background-color: gray;
+    height: 60px;
+    width: 250px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+
+}
+#item{
+    padding: 10% 0;
 }
 .cartdiv ul li {
     text-decoration: none;
     list-style-type: none;
+    
 }
