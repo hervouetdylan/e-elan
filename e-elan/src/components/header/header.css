@@ -5,6 +5,8 @@
   justify-content: space-around;
   align-items: center;
   align-content: flex-start;
+  background-color: rgb(116, 115, 115);
+  color:#fff;
 }
 
 #menu-deroulant, #menu-deroulant ul {
@@ -54,4 +56,7 @@ button{
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
+}
+.test{
+  margin-right: 25%;
 }
