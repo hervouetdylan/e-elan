@@ -1,10 +1,16 @@
 import React from 'react';
 import './footer.css';
+import image from '../../assets/logo.png';
 
 const Footer = () => (
   <div class="footer">
     <footer>
         <div class="row">
+            <div class="colonne">
+                <div >
+                <img class="logoFooter" src={image} alt="image"/>
+                </div>
+            </div>
             <div class="colonne">
                 <h2>E-ELAN COMMERCE</h2>
                 <p>&copy; 2023 </p>
