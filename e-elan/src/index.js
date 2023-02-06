@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Footer from './components/footer/footer';
-import LoginPage from './components/footer/auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <Footer />
-    <LoginPage />
+    {/* <LoginPage /> */}
+    {/* <SignUp /> */}
   </React.StrictMode>
 );
 

@@ -20,6 +20,7 @@ const LoginPage = () => {
   };
 
   return (
+    <div className="login">
     <form onSubmit={handleSubmit}>
       <h2 id="title">Login</h2>
         <input
@@ -40,6 +41,7 @@ const LoginPage = () => {
         <br />
       <button type="submit" id="submit_btn">Submit</button>
     </form>
+    </div>
   );
 };
 
