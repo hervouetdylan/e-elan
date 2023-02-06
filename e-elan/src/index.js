@@ -12,6 +12,8 @@ root.render(
     <App />
     <Home />
     <Footer />
+    {/* <LoginPage /> */}
+    {/* <SignUp /> */}
   </React.StrictMode>
 );
 
