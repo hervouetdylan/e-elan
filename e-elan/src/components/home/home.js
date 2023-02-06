@@ -1,0 +1,78 @@
+import React from 'react';
+import './home.css';
+import produit from '../../assets/produit.png';
+
+const data = [
+  { id: 1, name: 'Produit 1' , description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
+  { id: 2, name: 'Produit 2' , description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
+  { id: 3, name: 'Produit 3' , description:'zoefj', src: produit},
+];
+
+const listStyles = {
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+};
+const itemStyles = {
+  marginRight: '16px',
+};
+
+const Home = () => (
+  <div className="fond">
+<h2 className='text'>
+  Best seller
+</h2>
+<div style={listStyles} className=''>
+      {data.map(item => (
+        <div key={item.id} style={itemStyles}>
+          <div className='center'>
+          <img src={item.src} alt={item.name} />
+          </div>
+          <br></br>
+          <div className='gras'>
+          {item.name}
+          </div>
+          <br></br>
+          Description :
+          <div className='italic'>
+          {item.description }
+          </div>
+          <br></br>
+          <div className='center'>
+          <button>Ajouter au panier</button>
+          </div>
+        </div>
+      ))}
+  </div>
+    <h2 className='text'>
+  Promotions
+</h2>
+<div style={listStyles} className=''>
+      {data.map(item => (
+        <div key={item.id} style={itemStyles}>
+          <div className='center'>
+          <img src={item.src} alt={item.name} />
+          </div>
+          <br></br>
+          <div className='gras'>
+          {item.name}
+          </div>
+          <br></br>
+          Description :
+          <div className='italic'>
+          {item.description }
+          </div>
+          <br></br>
+          <div className='center'>
+          <button>Ajouter au panier</button>
+          </div>
+          <br></br>
+          <br></br>
+        </div>
+      ))}
+  </div>
+
+  </div>
+);
+
+export default Home;

@@ -2,12 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 import Header from './header/header';
+=======
+import Footer from './components/footer/footer';
+import Home from './components/home/home';
+>>>>>>> 9dee4234ca45c9f0751facbc321a548bcc803cf1
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <Header />
+=======
+    <App />
+    <Home />
+    <Footer />
+    {/* <LoginPage /> */}
+    {/* <SignUp /> */}
+>>>>>>> 9dee4234ca45c9f0751facbc321a548bcc803cf1
   </React.StrictMode>
 );
 
