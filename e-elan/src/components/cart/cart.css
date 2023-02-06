@@ -1,0 +1,15 @@
+.allcartdiv{
+    margin-top: 10%;
+    background-color: grey;
+    text-align: center;
+}
+
+.cartdiv img{
+    width: 158px;
+    height: 149px;
+    left: 10%;
+}
+.shopingcartlist{
+    text-align: center;
+    position: static;
+}
