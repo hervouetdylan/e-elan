@@ -43,15 +43,34 @@ const Home = () => (
           </div>
         </div>
       ))}
-    </div>
+  </div>
     <h2 className='text'>
   Promotions
 </h2>
-<ul>
+<div style={listStyles} className=''>
       {data.map(item => (
-        <li key={item.id}>{item.name}</li>
+        <div key={item.id} style={itemStyles}>
+          <div className='center'>
+          <img src={item.src} alt={item.name} />
+          </div>
+          <br></br>
+          <div className='gras'>
+          {item.name}
+          </div>
+          <br></br>
+          Description :
+          <div className='italic'>
+          {item.description }
+          </div>
+          <br></br>
+          <div className='center'>
+          <button>Ajouter au panier</button>
+          </div>
+          <br></br>
+          <br></br>
+        </div>
       ))}
-    </ul>
+  </div>
 
   </div>
 );
