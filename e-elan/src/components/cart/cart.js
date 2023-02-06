@@ -2,7 +2,7 @@ import React from 'react';
 import './cart.css';
 import cartimg from '../../assets/cart.png';
 // a changer
-const Product = [["chips","amazon","3"],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""],["","",""]
+const Product = [["chips","amazon","3"],["","",""],["","",""],["","",""],["","",""]
 ]
 
 const Cart = ()=>(
