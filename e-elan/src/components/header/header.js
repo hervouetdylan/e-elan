@@ -1,7 +1,5 @@
 import './header.css';
-import logo from './panier.png';
 
-const Logo = require('./panier.png');
 
 const Header = () => {
   return (
@@ -40,7 +38,6 @@ const Header = () => {
           </li>
         </ul>
         <h1>E-Elan</h1>
-        <img src={Logo}></img>
         <forms class="Sign Up">
           <button type="text">Sign Up</button>
         </forms>

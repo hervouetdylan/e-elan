@@ -19,9 +19,9 @@ const itemStyles = {
 
 const Home = () => (
   <div className="fond">
-<h2 className='text'>
+<h1 className='text'>
   Best seller
-</h2>
+</h1>
 <div style={listStyles} className=''>
       {data.map(item => (
         <div key={item.id} style={itemStyles}>
@@ -44,9 +44,9 @@ const Home = () => (
         </div>
       ))}
   </div>
-    <h2 className='text'>
+    <h1 className='text'>
   Promotions
-</h2>
+</h1>
 <div style={listStyles} className=''>
       {data.map(item => (
         <div key={item.id} style={itemStyles}>
