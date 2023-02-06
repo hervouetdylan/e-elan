@@ -1,5 +1,6 @@
 import React from 'react';
-import './cart.css'
+import './cart.css';
+import cartimg from '../../assets/cart.png';
 
 const testProduct = [
     'chips',
@@ -7,14 +8,19 @@ const testProduct = [
 ]
 const Cart = ()=>(
 
-    <div class="allcartdiv">
-        <img alt="Cart IMG" src='../assets/cart.png'></img>
-        <div class="shopingcartlist" >
-        <ul>
-            {testProduct.map((product) => (
-                <li>{product}</li>
+    <div class="cartdiv">
+        <img id="cartimg" src={cartimg} alt="cartIMG" />
+        <div class="shopinglist">
+        {testProduct.map((product) => (
+        <div id="product">
+            <ul>
+                <li>
+                <img id="productimg"src={cartimg} alt="product Image" />
+                <p>{product}</p>
+                </li>
+            </ul>
+        </div>
             ))}
-        </ul>
         </div>
     </div>
 );
