@@ -1,0 +1,29 @@
+.allProducts {
+    margin : 0 10%;
+    display: flex;
+    justify-content:space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.objectCart {
+    background-color: rgb(116, 115, 115);
+    padding: 20px;
+    border-radius: 5%;
+    margin: 15px 15px;
+}
+
+.imageProduct {
+    margin-top: auto;
+    width:100px;
+    height:100px;
+}
+
+.productName {
+    display: flex;
+    justify-content: center;   
+}
+
+.boutonCart {
+    background-color: rgb(94, 94, 94);
+}
