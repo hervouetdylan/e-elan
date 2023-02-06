@@ -1,0 +1,51 @@
+#username {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 34.51%;
+    bottom: 54.23%;
+}
+
+#password {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 48.59%;
+    bottom: 40.14%;
+}
+
+#title {
+    position: absolute;
+    left: 35.35%;
+    right: 35.35%;
+    top: 21.13%;
+    bottom: 73.77%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+
+#submit_btn{
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 64.08%;
+    bottom: 24.65%;
+    background-color: #000000;
+    color : #FFFFFF;
+    font-family: 'Roboto';
+    font-style: extra-bold;
+    font-size : 18px;
+ }
+
+ .login {
+    background: #F2F2F2;
+ }
