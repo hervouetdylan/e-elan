@@ -12,7 +12,7 @@ const normalizePort = val => {
   }
   return false;
 };
-const port = normalizePort(process.env.PORT || '4000');
+const port = normalizePort(process.env.PORT || '5000');
 app.set('port', port);
 
 const errorHandler = error => {
@@ -44,8 +44,5 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
-const cors = require('cors');
-const app = express();
-app.use(cors());
 
 server.listen(port);
