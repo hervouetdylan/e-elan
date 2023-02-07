@@ -5,8 +5,7 @@ import cartimg from '../../assets/cart.png';
 const Product = [["chips","amazon","3"],["","",""],["","",""],["","",""],["","",""]
 ]
 
-const Cart = ()=>(
-
+export const Cart = ()=>(
     <div class="cartdiv">
         <img id="cartimg" src={cartimg} alt="cartIMG" />
         <div class="shopinglist">

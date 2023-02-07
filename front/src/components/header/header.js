@@ -1,9 +1,11 @@
 import './header.css';
 import React, { useState } from 'react';
+import image from '../../assets/logo.png';
+import { Link } from "react-router-dom"
 
 
 
-const Header = ({ setIsLogin }) => {
+export const Header = ({ setIsLogin }) => {
 
   const handleLoginClick = () => {
     setIsLogin(true);
@@ -13,13 +15,13 @@ const Header = ({ setIsLogin }) => {
     <body>
       <div class="header">
         <ul id="menu-deroulant">
-	        <li><a href="#">Accueil</a>
+	        <li><a href="#">Categories</a>
 		        <ul>
               <li><a href="#">lien sous menu 1</a></li>
               <li><a href="#">lien sous menu 1</a></li>
 		        </ul>
 	        </li>
-          <li><a href="#">Produit</a>
+          <li><a href="#">Best-Sellers</a>
 		        <ul>
               <li><a href="#">Lien sous menu 2</a></li>
               <li><a href="#">Lien sous menu 2</a></li>
@@ -44,9 +46,12 @@ const Header = ({ setIsLogin }) => {
             </ul>
           </li>
         </ul>
-        <h1 className='test'>e-Elan</h1>
+        <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
         <forms class="Sign Up">
-          <button type="text" onClick={handleLoginClick}>Login</button>
+          <Link to="/signUp"><button type="text">Sign up</button></Link>
+        </forms>
+        <forms class="login">
+          <Link to="/loginPage"><button type="text">Login</button></Link>
         </forms>
       </div>
     </body>
