@@ -13,13 +13,13 @@ const Header = ({ setIsLogin }) => {
     <body>
       <div class="header">
         <ul id="menu-deroulant">
-	        <li><a href="#">Categories</a>
+	        <li><a href="#">Accueil</a>
 		        <ul>
               <li><a href="#">lien sous menu 1</a></li>
               <li><a href="#">lien sous menu 1</a></li>
 		        </ul>
 	        </li>
-          <li><a href="#">Best-Sellers</a>
+          <li><a href="#">Produit</a>
 		        <ul>
               <li><a href="#">Lien sous menu 2</a></li>
               <li><a href="#">Lien sous menu 2</a></li>
