@@ -12,7 +12,7 @@ export const Header = () => {
       <div class="header">
         <ul id="menu-deroulant">
 	        <li>
-            <Link to="/home"><a>Acceuil</a></Link>
+            <Link to="/home"><a>Home</a></Link>
 	        </li>
           <li>
           <Link to="/menu"><a>Product</a></Link>
@@ -28,14 +28,12 @@ export const Header = () => {
           </li>
         </ul>
         <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
-        <div class ="buttonHeader">
           <forms class="SignUp">
             <Link to="/signUp"><button type="text">Sign up</button></Link>
           </forms>
           <forms class="LogIn">
             <Link to="/loginPage"><button type="text">Log in</button></Link>
           </forms>
-        </div>
       </div>
     </body>
   );
