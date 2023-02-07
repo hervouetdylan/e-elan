@@ -1,7 +1,13 @@
 import './header.css';
+import React, { useState } from 'react';
 
 
-const Header = () => {
+const Header = ({ setIsLogin }) => {
+
+  const handleLoginClick = () => {
+    setIsLogin(true);
+  };
+
   return (
     <body>
       <div class="header">
@@ -37,9 +43,9 @@ const Header = () => {
             </ul>
           </li>
         </ul>
-        <h1>E-Elan</h1>
+        <h1 className='test'>E-Elan</h1>
         <forms class="Sign Up">
-          <button type="text">Sign Up</button>
+          <button type="text" onClick={handleLoginClick}>Login</button>
         </forms>
       </div>
     </body>

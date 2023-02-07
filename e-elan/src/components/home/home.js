@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './home.css';
 import produit from '../../assets/produit.png';
+import LoginPage from '../loginPage/loginPage';
+import Header from '../header/header';
+import Footer from '../footer/footer';
+
 
 const data = [
   { id: 1, name: 'Produit 1' , description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
@@ -17,12 +21,22 @@ const itemStyles = {
   marginRight: '16px',
 };
 
-const Home = () => (
-  <div className="fond">
-<h1 className='text'>
-  Best seller
-</h1>
-<div style={listStyles} className=''>
+const Home = () => {
+
+  const [isLogin, setIsLogin] = useState(false);
+
+ 
+
+return (
+<div >
+      <Header setIsLogin={setIsLogin} />
+      {isLogin ? <LoginPage /> : 
+      <div>
+<div className="fond">
+  <h1 className='text'>
+    Best seller
+  </h1>
+  <div style={listStyles} >
       {data.map(item => (
         <div key={item.id} style={itemStyles}>
           <div className='center'>
@@ -44,6 +58,7 @@ const Home = () => (
         </div>
       ))}
   </div>
+  <br></br>
     <h1 className='text'>
   Promotions
 </h1>
@@ -66,13 +81,16 @@ const Home = () => (
           <div className='center'>
           <button>Ajouter au panier</button>
           </div>
-          <br></br>
-          <br></br>
         </div>
       ))}
   </div>
+  
+</div>
+<Footer />
+</div>}
 
-  </div>
+</div>
 );
+      };
 
 export default Home;
