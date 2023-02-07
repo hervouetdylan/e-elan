@@ -26,7 +26,6 @@ const Home = () => {
   const [isLogin, setIsLogin] = useState(false);
 
  
-
 return (
 <div >
       <Header setIsLogin={setIsLogin} />
