@@ -16,6 +16,7 @@ npm install
 npm start
 ````
 ```bash
+Vous devez avoir axios et express
 cd back
 npm install
 npm start
