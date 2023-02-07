@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
+
 import "./loginPage.css";
 
 export const LoginPage = () => {
@@ -38,7 +40,7 @@ export const LoginPage = () => {
           onChange={handlePasswordChange}
         />
         <br />
-      <button type="submit" id="submit_btn">Submit</button>
+        <Link to="/menu"><button type="submit" id="submit_btn">Submit</button></Link>
     </form>
     </div>
   );

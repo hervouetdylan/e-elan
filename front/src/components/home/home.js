@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import './home.css';
 import produit from '../../assets/produit.png';
-import LoginPage from '../loginPage/loginPage';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
@@ -23,76 +23,71 @@ const itemStyles = {
 
 export const Home = () => {
 
-  const [isLogin, setIsLogin] = useState(false);
-
   return (
-  <div >
-        <Header setIsLogin={setIsLogin} />
-        {isLogin ? <LoginPage /> : 
-        <div>
-  <div className="fond">
-    <h1 className='text'>
-      #Best seller
+    <div>
+      <Header/>
+      <div className="fond">
+        <h1 className='text'>
+          #Best seller
+        </h1>
+      <div style={listStyles} >
+          {data.map(item => (
+            <div key={item.id} style={itemStyles}>
+              <div className='center'>
+              <img src={item.src} alt={item.name} />
+              </div>
+              <br></br>
+              <div className='gras'>
+              {item.name}
+              <br />
+              <br />
+              {item.price}
+              </div>
+              <br></br>
+              Description :
+              <div className='italic'>
+              {item.description }
+              </div>
+              <br></br>
+              <div className='center'>
+              <button>Ajouter au panier</button>
+              </div>
+            </div>
+          ))}
+      </div>
+      <br></br>
+        <h1 className='text'>
+      #Promotions
     </h1>
-    <div style={listStyles} >
-        {data.map(item => (
-          <div key={item.id} style={itemStyles}>
-            <div className='center'>
-            <img src={item.src} alt={item.name} />
+    <div style={listStyles} className=''>
+          {data.map(item => (
+            <div key={item.id} style={itemStyles}>
+              <div className='center'>
+              <img src={item.src} alt={item.name} />
+              </div>
+              <br></br>
+              <div className='gras'>
+              {item.name}
+              <br />
+              <br />
+              {item.price}
+              </div>
+              <br></br>
+              Description :
+              <div className='italic'>
+              {item.description }
+              </div>
+              <br></br>
+              <div className='center'>
+              <button>Ajouter au panier</button>
+              </div>
             </div>
-            <br></br>
-            <div className='gras'>
-            {item.name}
-            <br />
-            <br />
-            {item.price}
-            </div>
-            <br></br>
-            Description :
-            <div className='italic'>
-            {item.description }
-            </div>
-            <br></br>
-            <div className='center'>
-            <button>Ajouter au panier</button>
-            </div>
-          </div>
-        ))}
+          ))}
+      </div>
     </div>
-    <br></br>
-      <h1 className='text'>
-    #Promotions
-  </h1>
-  <div style={listStyles} className=''>
-        {data.map(item => (
-          <div key={item.id} style={itemStyles}>
-            <div className='center'>
-            <img src={item.src} alt={item.name} />
-            </div>
-            <br></br>
-            <div className='gras'>
-            {item.name}
-            <br />
-            <br />
-            {item.price}
-            </div>
-            <br></br>
-            Description :
-            <div className='italic'>
-            {item.description }
-            </div>
-            <br></br>
-            <div className='center'>
-            <button>Ajouter au panier</button>
-            </div>
-          </div>
-        ))}
-    </div>
-  </div>
-  <Footer />
-  </div>}
+    <Footer/>
   </div>
   );
-        };
+  };
 
 export default Home;
