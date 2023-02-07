@@ -26,9 +26,10 @@ const listStyles = {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
+  marginLeft: '10%',
 };
 const itemStyles = {
-  marginRight: '16px',
+  marginRight: '20px',
 };
 
 export const Home = () => {
@@ -85,7 +86,6 @@ export const Home = () => {
               <div className='center'>
               <img class = "imgBestPromotion" src={item.src} alt={item.name} />
               </div>
-              <br></br>
               <div className='center'>
               <h3>
               <u>
