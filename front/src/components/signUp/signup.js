@@ -11,8 +11,7 @@ export const SignUp = () => {
     e.preventDefault();
     // Envoyer les données d'inscription à l'API pour l'enregistrement
   };
-
-  return (
+  return(
     <form class= "signUp" onSubmit={handleSubmit}>
       <input
         id="usernameSignUp"
@@ -35,10 +34,14 @@ export const SignUp = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
+    <div class="choosebtwcomorclient">
+        <label for="test">Comercial<input type="radio" id="test"></input></label>
+        <label for="test">Clients<input type="radio" id="test"></input></label>
+    </div>
       <Link to="/loginPage">
         <button type="submit" class ="signUpButton">Sign up</button>
       </Link>
-    </form>
+  </form>
   );
 };
 
