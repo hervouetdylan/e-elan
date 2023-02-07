@@ -60,3 +60,7 @@ button{
 .test{
   margin-right: 25%;
 }
+
+.buttonHeader {
+  display :flex;
+}
