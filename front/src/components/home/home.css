@@ -21,3 +21,24 @@ text-align: center;
 .italic{
   font-style: italic;
 }
+
+.imgBestSeller {
+    display: flex;
+    margin-top: 0;
+    width: 340px;
+    height: 340px;
+    float: left;
+   
+    padding: 10% 0;
+}
+
+.imgBestPromotion {
+  display: flex;
+  margin-top: 0;
+  width: 340px;
+  height: 340px;
+  float: left;
+ 
+  padding: 10% 0;
+}
+
