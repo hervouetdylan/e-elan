@@ -1,36 +1,77 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom"
+
 import './menu.css';
-import produit from './../../assets/produit.png'
+import Header from '../header/header';
+import Footer from '../footer/footer';
 
-import { Route, Routes, Link } from "react-router-dom"
   
-
-const testProduct =[['chips',5], ['water',2], ['ordi',500],['etiquette',3],['plot',6],['terreau',90]];
-
 export function Menu() {
-    return (
-        <>
-            <div class="allProducts">
-                {testProduct.map((product) => (
-                    <div class = "objectCart ">
-                        <img class="imageProduct"src={produit} alt="Produit" />
-                        <p class="productName">{product[0]}</p>
-                        <p class="productName">{product[1]}$</p>
-                        <Link to="/cart"><button class="boutonCart">add to cart</button></Link>
-                    </div>      
-                ))}
-            </div>
-        <nav>
-          <ul>
-            <li><Link to="/Footer">footer</Link></li>
-          </ul>
-        </nav>
+  const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setFilteredProducts(data);
+      })
+      .catch((error) => console.error(error));
+  }, []);
+
+  useEffect(() => {
+    setFilteredProducts(
+      products.filter((product) =>
+        product.product_name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+  }, [searchTerm, products]);
   
-        <Routes>
-          
-        </Routes>
-      </>
-    )
-  }
+  return (
+    <div>
+      <Header/>
+      <br />
+      <div className='recherche'>
+      <form>
+        <input
+          type="text"
+          placeholder="Rechercher un produit"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+      </form>
+      </div>
+
+      <div class="allProducts">
+      {filteredProducts.map((product) => (
+            <div class = "objectCart " key={product.product_id}>
+              <div className='center'>
+                <u>
+                <h3>{product.product_name}</h3>
+                </u>
+              </div>
+                <div className='center'>
+                  <img class="imageProduct" src={product.product_image} alt={product.product_name} />
+                </div>
+                  <div className='center'>
+                    <p>{product.product_description}</p>
+                  </div>
+                   <div className='center'>
+                    <b>
+                    <p>Prix : {product.price}$</p>
+                    </b>
+                  </div>
+                <div className='center'>
+                  <Link to="/cart"><button class="boutonCart">add to cart</button></Link>
+                </div>
+            </div>
+        ))}
+      </div>
+      <Footer/>
+    </div>
+  )
+}
 
 export default Menu;

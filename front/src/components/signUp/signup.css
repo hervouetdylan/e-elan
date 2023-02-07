@@ -1,0 +1,35 @@
+#emailSignUp {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 20%;
+    bottom: 68.72%;
+}
+
+#usernameSignUp {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 34.51%;
+    bottom: 54.23%;
+}
+
+#passwordSignUp {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 48.59%;
+    bottom: 40.14%;
+} 
+
+.signUpButton {
+    position: absolute;
+    left: 37.5%;
+    right: 37.5%;
+    top: 62.67%;
+    bottom: 26.05%;
+}
+.choosebtwcomorclient{
+    margin-top: 40%;
+    text-align: center;
+}

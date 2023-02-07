@@ -6,6 +6,7 @@ import Header from './components/header/header.js';
 import Home from './components/home/home.js';
 import LoginPage from './components/loginPage/loginPage.js';
 import SignUp from './components/signUp/signup.js';
+import Search from './components/search/search.js';
 
 export function App() {
   return (
