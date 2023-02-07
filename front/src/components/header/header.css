@@ -1,6 +1,4 @@
 .header{
-  padding-right: 20%;
-  background-color: #747373;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,6 +10,7 @@
 }
 
 #menu-deroulant, #menu-deroulant ul {
+  padding: 0;
   margin: 0;
   list-style: none;
 }
@@ -28,10 +27,10 @@
   display: inherit;
 }
 #menu-deroulant a {
-  padding: 5px;
+  padding: 5px 10px;
   text-decoration: none;
   display: block;
-  color: white;
+color:#000;
 }
 #menu-deroulant ul {
   position: absolute;
@@ -43,6 +42,13 @@
 #menu-deroulant li:hover ul {
 /* Au survol des li du menu on replace les sous menus */
   left: auto;
+}
+
+.buttonHeader{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 button{

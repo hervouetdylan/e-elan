@@ -1,9 +1,11 @@
 import './header.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import image from '../../assets/logo.png';
+import { Link } from "react-router-dom"
 
 
-const Header = ({ setIsLogin }) => {
+
+export const Header = ({ setIsLogin }) => {
 
   const handleLoginClick = () => {
     setIsLogin(true);
@@ -44,13 +46,15 @@ const Header = ({ setIsLogin }) => {
             </ul>
           </li>
         </ul>
-        <img class="logoFooter" src={image} alt="image"/>
-        <forms class="Sign Up">
-          <button type="text" onClick={handleLoginClick}>Sign Up</button>
-        </forms>
-        <forms class="login">
-          <button type="text" onClick={handleLoginClick}>Login</button>
-        </forms>
+        <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
+        <div class="buttonHeader">
+          <form class="Sign Up">
+            <Link to="/signUp"><button type="text">Sign up</button></Link>
+          </form>
+          <form class="login">
+            <Link to="/loginPage"><button type="text">Login</button></Link>
+          </form>
+        </div>
       </div>
     </body>
   );

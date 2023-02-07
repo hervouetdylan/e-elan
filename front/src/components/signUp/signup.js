@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './signup.css';
+import { Link } from "react-router-dom"
 
-const SignUp = () => {
+export const SignUp = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,7 +39,7 @@ const SignUp = () => {
       />
       <br />
 
-      <button type="submit">Sign up</button>
+      <Link to="/loginPage"><button type="submit">Sign up</button></Link>
     </form>
   );
 };

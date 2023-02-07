@@ -2,7 +2,7 @@ import React from 'react';
 import './footer.css';
 import image from '../../assets/logo.png';
 
-const Footer = () => (
+export const Footer = () => (
   <div class="footer">
     <footer>
         <div class="row">
