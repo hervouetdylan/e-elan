@@ -1,8 +1,10 @@
 import React from 'react';
 import './footer.css';
 import image from '../../assets/logo.png';
+import { Link } from "react-router-dom"
 
-const Footer = () => (
+
+export const Footer = () => (
   <div class="footer">
     <footer>
         <div class="row">
@@ -19,35 +21,35 @@ const Footer = () => (
             <div class="colonne">
                 <h3>Categories</h3>
                 <ul>
-                    <li><a href="#">High tech</a></li>
-                    <li><a href="#">Books</a></li>
-                    <li><a href="#">Furnitures</a></li>
-                    <li><a href="#">Cosmetics</a></li>
-                    <li><a href="#">Sports</a></li>
+                    <li><Link to="/menu"><a>High tech</a></Link></li>
+                    <li><Link to="/menu"><a>Books</a></Link></li>
+                    <li><Link to="/menu"><a>Furnitures</a></Link></li>
+                    <li><Link to="/menu"><a>Cosmetics</a></Link></li>
+                    <li><Link to="/menu"><a>Sports</a></Link></li>
                 </ul>
             </div>
             <div class="colonne">
                 <h3>Help</h3>
                 <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Report a probleme</a></li>
-                    <li><a href="#">Support</a></li>
+                    <li><Link to="/home"><a>FAQ</a></Link></li>
+                    <li><Link to="/home"><a>Report a probleme</a></Link></li>
+                    <li><Link to="/home"><a>Support</a></Link></li>
                 </ul>
             </div>
             <div class="colonne">
                 <h3>About us</h3>
                 <ul>
-                    <li><a href="#">Our missions</a></li>
-                    <li><a href="#">Our values</a></li>
-                    <li><a href="#">Legal notice</a></li>
+                    <li><Link to="/home"><a>Our missions</a></Link></li>
+                    <li><Link to="/home"><a>Our values</a></Link></li>
+                    <li><Link to="/home"><a>Legal notice</a></Link></li>
                 </ul>
             </div>
             <div class="colonne">
                 <h3>Contact</h3>
                 <ul>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Our socials</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><Link to="/home"><a>Email</a></Link></li>
+                    <li><Link to="/home"><a>Our socials</a></Link></li>
+                    <li><Link to="/home"><a>Contact us</a></Link></li>
                 </ul>
             </div>
         </div>

@@ -1,52 +1,38 @@
 import './header.css';
-import React, { useState } from 'react';
+import React from 'react';
+import image from '../../assets/logo.png';
+import { Link } from "react-router-dom"
 
 
 
-const Header = ({ setIsLogin }) => {
-
-  const handleLoginClick = () => {
-    setIsLogin(true);
-  };
+export const Header = () => {
 
   return (
     <body>
       <div class="header">
         <ul id="menu-deroulant">
-	        <li><a href="#">Accueil</a>
-		        <ul>
-              <li><a href="#">lien sous menu 1</a></li>
-              <li><a href="#">lien sous menu 1</a></li>
-		        </ul>
+	        <li>
+            <Link to="/home"><a>Acceuil</a></Link>
 	        </li>
-          <li><a href="#">Produit</a>
-		        <ul>
-              <li><a href="#">Lien sous menu 2</a></li>
-              <li><a href="#">Lien sous menu 2</a></li>
-		        </ul>
+          <li>
+          <Link to="/menu"><a>Product</a></Link>
 	        </li>
-          <li><a href="#">Help</a>
-            <ul>
-              <li><a href="#">Lien sous menu 3</a></li>
-              <li><a href="#">Lien sous menu 3</a></li>
-            </ul>
+          <li>
+            <a href="">Help</a>
           </li>
-          <li><a href="#">About Us</a>
-            <ul>
-              <li><a href="#">Lien sous menu 3</a></li>
-              <li><a href="#">Lien sous menu 3</a></li>
-            </ul>
+          <li>
+            <a href="">About Us</a>
           </li>
-          <li><a href="#">Contact</a>
-            <ul>
-              <li><a href="#">Lien sous menu 3</a></li>
-              <li><a href="#">Lien sous menu 3</a></li>
-            </ul>
+          <li>
+            <a href="">Contact</a>
           </li>
         </ul>
-        <h1 className='test'>e-Elan</h1>
-        <forms class="Sign Up">
-          <button type="text" onClick={handleLoginClick}>Login</button>
+        <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
+        <forms class="SignUp">
+          <Link to="/signUp"><button type="text">Sign up</button></Link>
+        </forms>
+        <forms class="LogIn">
+          <Link to="/loginPage"><button type="text">Log in</button></Link>
         </forms>
       </div>
     </body>
