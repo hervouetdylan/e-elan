@@ -17,15 +17,6 @@ export const Header = () => {
           <li>
           <Link to="/menu"><a>Product</a></Link>
 	        </li>
-          <li>
-            <a href="">Help</a>
-          </li>
-          <li>
-            <a href="">About Us</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
         </ul>
         <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
           <forms class="SignUp">
