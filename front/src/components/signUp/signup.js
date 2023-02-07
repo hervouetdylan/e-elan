@@ -38,6 +38,8 @@ export const SignUp = () => {
       <Link to="/loginPage">
         <button type="submit" class ="signUpButton">Sign up</button>
       </Link>
+        <label for="test">Comercial<input type="radio" id="test"></input></label>
+        <label for="test">Clients<input type="radio" id="test"></input></label>
     </form>
   );
 };
