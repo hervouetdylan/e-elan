@@ -25,25 +25,29 @@ export function Menu() {
         <input
           type="text"
           placeholder="Rechercher un produit"
-         
-      
         />
       </form>
       </div>
 
       <div class="allProducts">
-
-    
         {products.map((product) => (
-          <div class = "objectCart ">
-            <div key={product.product_id}>
-          <h3>{product.product_name}</h3>
-          <img class="imageProduct" src={product.product_image} alt={product.product_name} />
-          <p>{product.product_description}</p>
-          <p>Prix : {product.price}</p>
-        </div>
-            <Link to="/cart"><button class="boutonCart">add to cart</button></Link>
-          </div>      
+            <div class = "objectCart " key={product.product_id}>
+              <div className='center'>
+                <h3>{product.product_name}</h3>
+              </div>
+                <div className='center'>
+                  <img class="imageProduct" src={product.product_image} alt={product.product_name} />
+                </div>
+                <div className='center'>
+                  <p>{product.product_description}</p>
+                </div>
+                <div className='center'>
+                  <p>Prix : {product.price}$</p>
+                </div>
+                <div className='center'>
+                  <Link to="/cart"><button class="boutonCart">add to cart</button></Link>
+                </div>
+            </div>
         ))}
       </div>
       <Footer/>

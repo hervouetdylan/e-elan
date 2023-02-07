@@ -38,36 +38,31 @@ export const Home = () => {
       <Header/>
       <div className="fond">
         <h1 className='text'>
-          #Best seller
+          Best seller
         </h1>
       <div style={listStyles} >
           {data.map(item => (
             <div key={item.id} style={itemStyles}>
               <div className='center'>
-              <img class = "imgBestSeller" src={item.src} alt={item.name} />
+                <img class = "imgBestSeller" src={item.src} alt={item.name} />
               </div>
-              <br></br>
               <div className='gras'>
-              {item.name}
-              <br />
-              <br />
-              {item.price}
-              </div>
-              <br></br>
+                {item.name}
+                {item.price}
+              </div>  
               Description :
               <div className='italic'>
-              {item.description }
+                {item.description }
               </div>
-              <br></br>
               <div className='center'>
-              <button>Ajouter au panier</button>
+                <button>Ajouter au panier</button>
               </div>
             </div>
           ))}
       </div>
       <br></br>
         <h1 className='text'>
-      #Promotions
+      Promotions
     </h1>
     <div style={listStyles} className=''>
           {dataPromotion.map(item => (

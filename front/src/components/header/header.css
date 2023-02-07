@@ -39,10 +39,6 @@
   text-align: left;
   z-index: 1000;
 }
-#menu-deroulant li:hover ul {
-/* Au survol des li du menu on replace les sous menus */
-  left: auto;
-}
 
 button{
   background-color: #000;
@@ -57,6 +53,11 @@ button{
   cursor: pointer;
   border-radius: 5px;
 }
+
+button:hover {
+  background-color: rgb(27, 27, 27);
+}
+
 .test{
   margin-right: 25%;
 }
