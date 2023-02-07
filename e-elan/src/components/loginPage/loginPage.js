@@ -15,8 +15,7 @@ const LoginPage = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    console.log("Username : ", username);
-    console.log("Password : ", password);
+
   };
 
   return (

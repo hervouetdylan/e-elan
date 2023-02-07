@@ -2,6 +2,7 @@ import './header.css';
 import React, { useState } from 'react';
 
 
+
 const Header = ({ setIsLogin }) => {
 
   const handleLoginClick = () => {
@@ -43,7 +44,7 @@ const Header = ({ setIsLogin }) => {
             </ul>
           </li>
         </ul>
-        <h1 className='test'>E-Elan</h1>
+        <h1 className='test'>e-Elan</h1>
         <forms class="Sign Up">
           <button type="text" onClick={handleLoginClick}>Login</button>
         </forms>

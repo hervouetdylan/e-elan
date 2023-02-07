@@ -7,9 +7,9 @@ import Footer from '../footer/footer';
 
 
 const data = [
-  { id: 1, name: 'Produit 1' , description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
-  { id: 2, name: 'Produit 2' , description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
-  { id: 3, name: 'Produit 3' , description:'zoefj', src: produit},
+  { id: 1, name: 'Produit 1' ,price:'12 €', description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
+  { id: 2, name: 'Produit 2' , price:'20€', description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
+  { id: 3, name: 'Produit 3' , price:'32€' ,description:'zoefj', src: produit},
 ];
 
 const listStyles = {
@@ -34,7 +34,7 @@ return (
       <div>
 <div className="fond">
   <h1 className='text'>
-    Best seller
+    #Best seller
   </h1>
   <div style={listStyles} >
       {data.map(item => (
@@ -45,6 +45,9 @@ return (
           <br></br>
           <div className='gras'>
           {item.name}
+          <br />
+          <br />
+          {item.price}
           </div>
           <br></br>
           Description :
@@ -60,7 +63,7 @@ return (
   </div>
   <br></br>
     <h1 className='text'>
-  Promotions
+  #Promotions
 </h1>
 <div style={listStyles} className=''>
       {data.map(item => (
@@ -71,6 +74,9 @@ return (
           <br></br>
           <div className='gras'>
           {item.name}
+          <br />
+          <br />
+          {item.price}
           </div>
           <br></br>
           Description :
@@ -84,11 +90,9 @@ return (
         </div>
       ))}
   </div>
-  
 </div>
 <Footer />
 </div>}
-
 </div>
 );
       };
