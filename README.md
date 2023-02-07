@@ -4,11 +4,10 @@
 Le but de ce projet est de proposer, en 48 heures chrono, un Proof of Concept de boutique en ligne décentralisée permettant aux petits et moyens commerçants de se libérer des gros marketplaces centralisés. 
 
 ## Installation 
-Vous devez avoir node.Js d'installer [ici](https://nodejs.org)
+Vous devez avoir installé [Node.js](https://nodejs.org/en/) et [Git](https://git-scm.com/downloads) sur votre machine.
 ```
 git clone https://github.com/hervouetdylan/e-elan.git
 ```
-A COMPLETER
 ## Utilisation
 Lancer le projet
 ````bash
@@ -29,9 +28,9 @@ npm start
 * Recherche de produits
 
 ## API 
-* [API](https://e-elan48.000webhostapp.com/products.php)
+*  Toutes les données sont stockées dans une base de données MySql hébergée sur 000webhost [API](https://e-elan48.000webhostapp.com/products.php).
 
-## Diagramme de classe
+## Diagramme de classes
 ```mermaid
 classDiagram
 
