@@ -28,12 +28,14 @@ export const Header = () => {
           </li>
         </ul>
         <Link to="/home"><img class="logoFooter" src={image} alt="image"/></Link>
-        <forms class="SignUp">
-          <Link to="/signUp"><button type="text">Sign up</button></Link>
-        </forms>
-        <forms class="LogIn">
-          <Link to="/loginPage"><button type="text">Log in</button></Link>
-        </forms>
+        <div class ="buttonHeader">
+          <forms class="SignUp">
+            <Link to="/signUp"><button type="text">Sign up</button></Link>
+          </forms>
+          <forms class="LogIn">
+            <Link to="/loginPage"><button type="text">Log in</button></Link>
+          </forms>
+        </div>
       </div>
     </body>
   );
