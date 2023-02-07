@@ -46,6 +46,7 @@ const Header = ({ setIsLogin }) => {
         </ul>
         <img class="logoFooter" src={image} alt="image"/>
         <forms class="Sign Up">
+          <button type="text" onClick={handleLoginClick}>Sign Up</button>
         </forms>
         <forms class="login">
           <button type="text" onClick={handleLoginClick}>Login</button>

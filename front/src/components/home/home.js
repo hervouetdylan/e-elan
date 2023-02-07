@@ -27,7 +27,7 @@ const Home = () => {
 
  
 return (
-<div >
+  <div>
       <Header setIsLogin={setIsLogin} />
       {isLogin ? <LoginPage /> : 
       <div>
@@ -94,6 +94,6 @@ return (
 </div>}
 </div>
 );
-      };
+};
 
 export default Home;
