@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch API</title>
+</head>
+<body>
+  <div id="result"></div>
+</body>
+<script>
+  //fetch API in https://e-elan48.000webhostapp.com/users.php
+  fetch('https://e-elan48.000webhostapp.com/users.php')
+  .then(response => response.json())
+  .then(data => {
+    let result = document.getElementById('result');
+    result.innerHTML = data[0].username;
+    console.log(data)
+  })
+  .catch(error => console.log(error));
+</script>
+</html>
