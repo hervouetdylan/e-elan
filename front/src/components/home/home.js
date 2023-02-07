@@ -12,14 +12,14 @@ import Footer from '../footer/footer';
 
 
 const data = [
-  { id: 1, name: 'Banana' ,price:'3€', description : 'Banana from Guadeloupe', src: banana},
-  { id: 2, name: 'Desktop' , price:'2000€', description : "Screen : 15,6' Stockage : SSD 128 Go", src: desktop},
-  { id: 3, name: 'Plante' , price:'32€' ,description:' Chamaedorea Elegans', src: plante},
+  { id: 1, name: 'Banana' ,price:'3$', description : 'Banana from Guadeloupe', src: banana},
+  { id: 2, name: 'Desktop' , price:'2000$', description : "Screen : 15,6' Stockage : SSD 128 Go", src: desktop},
+  { id: 3, name: 'Plante' , price:'32$' ,description:' Chamaedorea Elegans', src: plante},
 ];
 const dataPromotion = [
-  { id: 1, name: 'Watch' ,price:'150€', description : 'watch from switzerland', src: watch},
-  { id: 2, name: 'Ball' , price:'10€', description : "Basket ball, age min :5", src: ball},
-  { id: 3, name: 'Shoes' , price:'90€' ,description:'shoes demon slayer', src: shoes},
+  { id: 1, name: 'Watch' ,price:'150$', description : 'watch from switzerland', src: watch},
+  { id: 2, name: 'Ball' , price:'10$', description : "Basket ball, age min :5", src: ball},
+  { id: 3, name: 'Shoes' , price:'90$' ,description:'shoes demon slayer', src: shoes},
 ];
 
 const listStyles = {
@@ -53,7 +53,6 @@ export const Home = () => {
                 </u>
                 </h3>
               </div> 
-                <br />
               <ul>
                 <li>
                 <div className='gras'>
@@ -94,8 +93,6 @@ export const Home = () => {
               </u>
               </h3>
               </div>
-              <br />
-              <br />
               <ul>
                 <li>
               <div className='gras'>
