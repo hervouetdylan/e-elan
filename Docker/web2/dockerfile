@@ -1,10 +1,11 @@
-FROM node:alpine
+FROM node:18.12.1
 
-WORKDIR /usr/src/app
+RUN apt update
+RUN apt upgrade -y
+RUN apt-get install git
+RUN git clone https://github.com/hervouetdylan/e-elan.git
 
-COPY ./package*.json ./
-RUN npm install express
-# RUN npm install -g npm@9.4.1
-COPY ./server.js ./
-
-CMD ["npm","start"]
+# installe les dépendances du projet
+RUN npm install
+# construit l'app pour la production en la minifiant
+CMD [ "npm", "run", "serve" ]
