@@ -33,17 +33,19 @@ export function Menu() {
         {products.map((product) => (
             <div class = "objectCart " key={product.product_id}>
               <div className='center'>
+                <u>
                 <h3>{product.product_name}</h3>
+                </u>
               </div>
                 <div className='center'>
                   <img class="imageProduct" src={product.product_image} alt={product.product_name} />
                 </div>
-                <div className='center'>
-                  <p>{product.product_description}</p>
-                </div>
-                <div className='center'>
-                  <p>Prix : {product.price}$</p>
-                </div>
+                  <div className='center'>
+                    <p>{product.product_description}</p>
+                  </div>
+                   <div className='center'>
+                    <p>Prix : {product.price}$</p>
+                  </div>
                 <div className='center'>
                   <Link to="/cart"><button class="boutonCart">add to cart</button></Link>
                 </div>

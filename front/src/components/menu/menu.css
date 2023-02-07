@@ -6,8 +6,9 @@
 }
 
 .objectCart {
-    background-color: rgb(121, 121, 121);
+    background-color:#DCDCDC	;
     padding: 20px;
+    border: #000 solid 1px;
     border-radius: 5%;
     margin: 15px 15px;
     width: 200px;
