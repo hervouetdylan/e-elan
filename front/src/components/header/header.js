@@ -1,6 +1,6 @@
 import './header.css';
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
+import image from '../../assets/logo.png';
 
 
 const Header = ({ setIsLogin }) => {
@@ -44,7 +44,7 @@ const Header = ({ setIsLogin }) => {
             </ul>
           </li>
         </ul>
-        <h1 className='test'>e-Elan</h1>
+        <img class="logoFooter" src={image} alt="image"/>
         <forms class="Sign Up">
           <button type="text" onClick={handleLoginClick}>Login</button>
         </forms>

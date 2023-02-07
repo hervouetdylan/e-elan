@@ -1,12 +1,3 @@
-.dark {
-  background-color: #000;
-  color: #fff;
-}
-.light {
-  background-color: #fff;
-  color: #000;
-}
-
 .header{
   background-color: #747373;
   display: flex;
