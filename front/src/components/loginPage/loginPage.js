@@ -1,44 +1,46 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./loginPage.css";
 
 const LoginPage = () => {
-  const [username, setUsername] = useState("");
+  const [username, setusername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleUsernameChange = event => {
-    setUsername(event.target.value);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handlePasswordChange = event => {
-    setPassword(event.target.value);
-  };
+    try {
+      const res = await axios.post('https://e-elan48.000webhostapp.com/verifyLogin.php',JSON.stringify({  
+        "username": username,
+        "password": password,
+      }));
 
-  const handleSubmit = event => {
-    event.preventDefault();
-
+      console.log(res.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
     <div className="login">
     <form onSubmit={handleSubmit}>
-      <h2 id="title">Login</h2>
-        <input
-          id = "username"
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={handleUsernameChange}
-        />
-        <br />
-        <input
-          type="password"
-          id = "password"
-          placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-        <br />
-      <button type="submit" id="submit_btn">Submit</button>
+      {error && <p>{error}</p>}
+      <input
+        id = "username"
+        type="username"
+        placeholder="username"
+        value={username}
+        onChange={(event) => setusername(event.target.value)}
+      />
+      <input
+        id = "password"
+        type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+      />
+      <button type="submit">Login</button>
     </form>
     </div>
   );

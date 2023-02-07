@@ -12,10 +12,8 @@ $database = new Database();
 $db = $database->getConnection();
 $data = json_decode(file_get_contents("php://input"), true);
 
-//select the last user_id
 $q= "SELECT user_id FROM user ORDER BY user_id DESC LIMIT 1";
 
-//user_id is the last user_id + 1
 $stmt = $db->prepare($q);
 $stmt->execute();
 $stmt->bind_result($user_id);
@@ -25,6 +23,7 @@ $user_id = $user_id + 1;
 $username = $data['username'];
 $email = $data['email'];
 $password = $data['password'];
+$password = password_hash($data['password'], PASSWORD_BCRYPT);
 $isSeller = $data['isSeller'];
 
 $query = "INSERT INTO user (user_id, username, email, password_hash, is_seller) VALUES (?, ?, ?,?,?)";
