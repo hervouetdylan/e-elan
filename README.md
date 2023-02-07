@@ -75,9 +75,8 @@ category --> product
 cart_table --> product
 ```
 
-
-
-
+## Explication du projet
+Le projet consiste en la création d'une boutique en ligne décentralisée. Le projet est composé de deux parties : le front et le back. Le front est une application React qui permet de visualiser les produits et de les ajouter au panier. Le back est une API créee avec php qui permet de récupérer les données de la base de données.
 
     
 ## Outils utilisés
@@ -92,7 +91,7 @@ cart_table --> product
 * [phpMyAdmin](https://www.phpmyadmin.net)
 * [php](https://www.php.net)
 * [000webhost](https://www.000webhost.com)
-
+* [Axios](https://www.npmjs.com/package/axios)
 ## Présentation équipe 
 * Gracieux ALHONSOU KOUMAGNON B3
 * Alvin LUCAS B3
