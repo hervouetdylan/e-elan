@@ -12,7 +12,7 @@ export const Header = () => {
       <div class="header">
         <ul id="menu-deroulant">
 	        <li>
-            <Link to="/home"><a>Acceuil</a></Link>
+            <Link to="/home"><a>Home</a></Link>
 	        </li>
           <li>
           <Link to="/menu"><a>Product</a></Link>
