@@ -1,0 +1,44 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+     MYSQL_PASSWORD: 'password'
+     MYSQL_DATABASE: 'database'
+     MYSQL_USER: 'user'
+     MYSQL_ROOT_PASSWORD: 'root'
+
+    ports:
+      - '3366:3306'
+  web1:
+    restart: on-failure
+    build: ./web1
+    ports:
+      - '81:5000'
+    environment:
+      DATABASE_HOST: 'mysql'
+      DATABASE_PORT: '3306'
+      DATABASE_NAME: 'database'
+      DATABASE_USER: 'user'
+      DATABASE_PASSWORD: 'password'
+      restart: on-failure
+
+  web2:
+    restart: on-failure
+    build: ./web2
+    ports:
+      - '82:5000'
+    environment:
+      DATABASE_HOST: 'mysql'
+      DATABASE_PORT: '3306'
+      DATABASE_NAME: 'database'
+      DATABASE_USER: 'user'
+      DATABASE_PASSWORD: 'password'
+
+  nginx:
+    build: ./nginx
+    ports:
+    - '8010:8010'
+    depends_on:
+    - web1
+    - web2
