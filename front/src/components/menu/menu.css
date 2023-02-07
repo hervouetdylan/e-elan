@@ -49,9 +49,22 @@ button{
     }
 
 .recherche{
-  margin-top: 2%;
-  margin-bottom: 2%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: #fff;
 }
 
+.recherche input {
+  width: 80%;
+  height: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border: #000 solid 1px;
+  background-color: #fff;
+  color: #333;
+}
 

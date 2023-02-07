@@ -32,6 +32,7 @@ export function Menu() {
   return (
     <div>
       <Header/>
+      <br />
       <div className='recherche'>
       <form>
         <input
