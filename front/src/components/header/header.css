@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly ;
   align-items: center;
   align-content: flex-start;
   background-color: rgb(116, 115, 115);
@@ -30,7 +30,7 @@
   padding: 5px 10px;
   text-decoration: none;
   display: block;
-color:#000;
+  color:#ffffff;
 }
 #menu-deroulant ul {
   position: absolute;
@@ -38,17 +38,6 @@ color:#000;
   left: -999em;
   text-align: left;
   z-index: 1000;
-}
-#menu-deroulant li:hover ul {
-/* Au survol des li du menu on replace les sous menus */
-  left: auto;
-}
-
-.buttonHeader{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 button{
@@ -64,6 +53,11 @@ button{
   cursor: pointer;
   border-radius: 5px;
 }
+
+button:hover {
+  background-color: rgb(27, 27, 27);
+}
+
 .test{
   margin-right: 25%;
 }
