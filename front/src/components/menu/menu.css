@@ -41,3 +41,9 @@
 .boutonCart:hover {
         background-color: rgb(27, 27, 27);
       }
+
+.recherche{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}

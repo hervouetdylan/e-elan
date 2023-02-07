@@ -1,15 +1,25 @@
 import React from 'react';
 
 import './home.css';
-import produit from '../../assets/produit.png';
+import desktop from '../../assets/ordi.png';
+import plante from '../../assets/plante.webp';
+import banana from '../../assets/banane.webp';
+import watch from '../../assets/montre.webp';
+import ball from '../../assets/ball.webp';
+import shoes from '../../assets/shoes.webp';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
 
 const data = [
-  { id: 1, name: 'Produit 1' ,price:'12 €', description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
-  { id: 2, name: 'Produit 2' , price:'20€', description : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nisl, eget ultricies nisl nisl eget nisl.', src: produit},
-  { id: 3, name: 'Produit 3' , price:'32€' ,description:'zoefj', src: produit},
+  { id: 1, name: 'Banana' ,price:'3€', description : 'Banana from Guadeloupe', src: banana},
+  { id: 2, name: 'desktop' , price:'2000€', description : "Screen : 15,6' Stockage : SSD 128 Go", src: desktop},
+  { id: 3, name: 'plante' , price:'32€' ,description:' Chamaedorea Elegans', src: plante},
+];
+const dataPromotion = [
+  { id: 1, name: 'watch' ,price:'150€', description : 'watch from switzerland', src: watch},
+  { id: 2, name: 'Ball' , price:'10', description : "Basket ball, age min :5", src: ball},
+  { id: 3, name: 'Shoes' , price:'90€' ,description:'shoes demon slayer', src: shoes},
 ];
 
 const listStyles = {
@@ -21,74 +31,73 @@ const itemStyles = {
   marginRight: '16px',
 };
 
-const Home = () => {
+export const Home = () => {
 
-return (
-<div >
-  <Header />
-  <div className="fond">
-  <h1 className='text'>
-    #Best seller
-  </h1>
-  <div style={listStyles} >
-      {data.map(item => (
-        <div key={item.id} style={itemStyles}>
-          <div className='center'>
-          <img src={item.src} alt={item.name} />
-          </div>
-          <br></br>
-          <div className='gras'>
-          {item.name}
-          <br />
-          <br />
-          {item.price}
-          </div>
-          <br></br>
-          Description :
-          <div className='italic'>
-          {item.description }
-          </div>
-          <br></br>
-          <div className='center'>
-          <button>Ajouter au panier</button>
-          </div>
-        </div>
-      ))}
+  return (
+    <div>
+      <Header/>
+      <div className="fond">
+        <h1 className='text'>
+          #Best seller
+        </h1>
+      <div style={listStyles} >
+          {data.map(item => (
+            <div key={item.id} style={itemStyles}>
+              <div className='center'>
+              <img class = "imgBestSeller" src={item.src} alt={item.name} />
+              </div>
+              <br></br>
+              <div className='gras'>
+              {item.name}
+              <br />
+              <br />
+              {item.price}
+              </div>
+              <br></br>
+              Description :
+              <div className='italic'>
+              {item.description }
+              </div>
+              <br></br>
+              <div className='center'>
+              <button>Ajouter au panier</button>
+              </div>
+            </div>
+          ))}
+      </div>
+      <br></br>
+        <h1 className='text'>
+      #Promotions
+    </h1>
+    <div style={listStyles} className=''>
+          {dataPromotion.map(item => (
+            <div key={item.id} style={itemStyles}>
+              <div className='center'>
+              <img class = "imgBestPromotion" src={item.src} alt={item.name} />
+              </div>
+              <br></br>
+              <div className='gras'>
+              {item.name}
+              <br />
+              <br />
+              {item.price}
+              </div>
+              <br></br>
+              Description :
+              <div className='italic'>
+              {item.description }
+              </div>
+              <br></br>
+              <div className='center'>
+              <button>Ajouter au panier</button>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+    <Footer/>
   </div>
-  <br></br>
-    <h1 className='text'>
-  #Promotions
-</h1>
-<div style={listStyles} className=''>
-      {data.map(item => (
-        <div key={item.id} style={itemStyles}>
-          <div className='center'>
-          <img src={item.src} alt={item.name} />
-          </div>
-          <br></br>
-          <div className='gras'>
-          {item.name}
-          <br />
-          <br />
-          {item.price}
-          </div>
-          <br></br>
-          Description :
-          <div className='italic'>
-          {item.description }
-          </div>
-          <br></br>
-          <div className='center'>
-          <button>Ajouter au panier</button>
-          </div>
-        </div>
-      ))}
-  </div>
-</div>
-<Footer />
-
-</div>
-);
-      };
+  );
+  };
 
 export default Home;

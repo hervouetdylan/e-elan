@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom"
 
 import './menu.css';
-import produit from './../../assets/produit.png'
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
   
-const testProduct =[['chips',5], ['water',2], ['ordi',500],['etiquette',3],['plot',6],['terreau',90]];
-
 export function Menu() {
   const [products, setProducts] = useState([]);
 
@@ -18,9 +15,21 @@ export function Menu() {
       .then((data) => setProducts(data))
       .catch((error) => console.error(error));
   }, []);
+
+
   return (
     <div>
       <Header/>
+      <div className='recherche'>
+      <form>
+        <input
+          type="text"
+          placeholder="Rechercher un produit"
+         
+      
+        />
+      </form>
+      </div>
 
       <div class="allProducts">
 
