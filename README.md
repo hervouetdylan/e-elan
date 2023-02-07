@@ -72,8 +72,8 @@ class cart_table{
 user --> cart
 user --> product
 cart --> cart_table
+category --> product
 cart_table --> product
-product --> category
 ```
 
 
